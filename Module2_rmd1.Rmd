@@ -3,8 +3,8 @@ title: "Module 2 - Rmarkdown Document 1"
 author: "Qi Wang"
 date: "03/05/2021"
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
   word_document: default
 ---
 
@@ -95,8 +95,21 @@ summary(cars)
 
 You can also embed plots, for example:
 
-```{r pressure, echo=FALSE}
+```{r pressure, echo=FALSE, message=TRUE}
 plot(pressure)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+```{r pressure2, echo=FALSE, fig.height=5, fig.width=5, message=TRUE, warning=TRUE}
+plot(pressure)
+```
+
+## Insert tables
+```{r echo=FALSE}
+knitr::kable(head(cars), 
+             caption = "Top 6 Rows of Cars Dataset")
+```
+
+## Insert an equation
+$$Y = \beta_0 + \beta_1x$$
