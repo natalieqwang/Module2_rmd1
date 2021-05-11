@@ -3,9 +3,9 @@ title: "Module 2 - Rmarkdown Document 1"
 author: "Qi Wang"
 date: "03/05/2021"
 output:
+  word_document: default
   html_document: default
   pdf_document: default
-  word_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -113,3 +113,32 @@ knitr::kable(head(cars),
 
 ## Insert an equation
 $$Y = \beta_0 + \beta_1x$$
+
+
+## Insert images
+
+Here is an image inserted:
+
+![sunstar](sunstar.png)
+
+Here is the R logo:
+
+![r logo](https://www.r-project.org/logo/Rlogo.svg)
+
+## Insert an animated GIT and video
+
+![sunstar](sunstar/sunstar.gif)
+
+![sunstar](sunstar/sunstar.mp4)
+
+Vebmedr package allows you to insert YouTube videos. 
+
+
+## Inserting test with some footnotes
+
+Here is footnote reference [^1] and another [^longnote]
+
+Here is an inline footnote ^[Inline notes are easier to write since you dont have to pick an identifier and move down to type the note.]
+
+[^1]: Here is the footnote.
+[^longnote]: Here is one with multiple blocks.
