@@ -3,8 +3,8 @@ title: "Module 2 - Rmarkdown Document 1"
 author: "Qi Wang"
 date: "03/05/2021"
 output:
-  word_document: default
   html_document: default
+  word_document: default
   pdf_document: default
 ---
 
@@ -131,7 +131,7 @@ Here is the R logo:
 
 ![sunstar](sunstar/sunstar.mp4)
 
-Vebmedr package allows you to insert YouTube videos. 
+[Vebmedr](http://ijlyttle.github.io/vembedr/) package allows you to insert YouTube videos. 
 
 
 ## Inserting test with some footnotes
@@ -142,3 +142,11 @@ Here is an inline footnote ^[Inline notes are easier to write since you dont hav
 
 [^1]: Here is the footnote.
 [^longnote]: Here is one with multiple blocks.
+
+
+## Insert an Youtube video
+```{r}
+library(magrittr)
+vembedr::embed_url("https://www.youtube.com/watch?v=uV4UpCq2azs")
+```
+
